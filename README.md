@@ -26,3 +26,13 @@ He thought it'll be a good idea to convert this to Object Oriented Programming. 
 However, his trainer told him that what he did is not Object Oriented programming and asked Shivam to try again. 
 - Try to articulate problems with Shivam's OOP solution. (Write it somewhere and share it with your trainer)
 - Fork the project and fix the design related problem with Shivam's OOP solution. Share that with your trainer too.
+
+Problem with Above Code:
+
+-Having the getters make the data in Point class accessible to outside world.
+-In order to find distance and direction, we need to find xDistance and yDistance which is common in both. Hence there is duplication of lines in the code.
+
+Solution
+
+- distance and direction methods are taken to the Point class itself. This eliminates the need of getX() and getY().
+- In order to reduce duplication of code in distance() and direction(), 2 additional methods differenceX() and differenceY() are added which finds the difference between  x and y co-ordinates respectively.
